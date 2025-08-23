@@ -1,0 +1,21 @@
+num1=int(input("enter the you number need: "))
+if num1>0:
+    print("postive number")
+elif num1==0:
+    print("zero")
+else:
+    print("negative number")
+a=int(input("enter the you number need-a: "))
+b=int(input("enter the you number need-b: "))
+if a>b:
+    print("a is greater than b")
+elif a==b:
+    print("a is equal to b")
+else :
+    print("a is less than b")
+num2=int(input("enter the you number need2: "))
+if num2 % 2==0:
+    print("It is a evean number")
+else :
+    print("It is a odd number")
+
