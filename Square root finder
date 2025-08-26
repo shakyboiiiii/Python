@@ -1,0 +1,2 @@
+number=int(input("Enter the number you wqnt to square root: "))
+print(number * number," is the answer")
