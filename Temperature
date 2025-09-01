@@ -1,0 +1,9 @@
+temp = int(input("Enter temperature in °C: "))
+if temp <= 0:
+    print("It's chilly 🥶")
+elif temp <= 15:
+    print("It's cool 😎")
+elif temp <= 25:
+    print("It's warm 🌞")
+else:
+    print("It's scorching 🔥")
