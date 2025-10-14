@@ -1,0 +1,42 @@
+rom datetime import date,time,datetime
+today=date.today()
+now=datetime.now()
+print("todays date is",today)
+print("todays date and time are",now)
+
+
+import random
+import time
+def getRandomdate(start_time,end_time):
+    print(f"Genderate random date from {start_time} and {end_time}")
+    randomGenderate=random.random()
+    date_format='%Y/%m/%d'
+    start_time=time.mktime(time.strptime(start_time,date_format))
+    end_time=time.mktime(time.strptime(end_time,date_format))
+    randomTime=start_time+randomGenderate*(end_time-start_time)
+    RandomDate=time.strftime(date_format,time.localtime(randomTime))
+    return RandomDate
+print(getRandomdate("2025/01/01","2025/10/07"))
+
+def hotel_cost(days):
+    return 1000*days
+def plane_ride(city):
+    if "bangalore" == city:
+        return 2500
+    elif "mumbai" == city:
+        return 2800
+    elif "chennai" == city:
+        return 2300
+def rental_cars(days):
+    if days >= 7 :
+        return 1500*days-500
+    elif days >= 3 :
+        return 1800*days-500
+    else:
+        return 2000*days-500
+def trip_cost(city,days,spendind_money):
+    return rental_cars(days)+hotel_cost(days)+plane_ride(city)+spendind_money
+print("rent of the car: ",rental_cars(5))
+print("cost of the plane: ",plane_ride("bangalore"))
+print("cost of the hotel room: ",hotel_cost(5))
+print("total cost: ",trip_cost("bangalore",5,10000))
