@@ -1,0 +1,10 @@
+start=int(input("enter start of range: "))
+end=int(input("enter end of range: "))
+
+squares =[x**2 for x in range(start, end + 1)]
+even_squares=[x for x in squares if x % 2 == 0]
+odd_squares=[x for x in squares if x % 2 != 0]
+
+print("all square values",squares)
+print("even square values",even_squares)
+print("odd square values",odd_squares)
