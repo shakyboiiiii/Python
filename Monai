@@ -1,0 +1,10 @@
+def calculate_due_amount(amount_paid, total_bill):
+  
+    change = amount_paid - total_bill
+    return change
+
+amount_paid = 4.00
+total_bill = 2.50
+
+due_amount = calculate_due_amount(amount_paid, total_bill)
+print(f"The shopkeeper should return: ${due_amount}")
