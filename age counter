@@ -1,0 +1,22 @@
+def check_age():
+    while True:
+        try:
+            age = input("Enter your age: ")
+            age = int(age)
+            break
+        except ValueError:
+            print("Value Error: Please enter a valid integer for age.")
+    return age
+
+def is_even_or_odd(age):
+    if age % 2 == 0:
+        print(f"The age {age} is an even number.")
+    else:
+        print(f"The age {age} is an odd number.")
+
+def main():
+    age = check_age()
+    is_even_or_odd(age)
+
+if __name__ == "__main__":
+    main()
