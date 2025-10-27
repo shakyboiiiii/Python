@@ -1,0 +1,37 @@
+tuple=(1,2,3,4,5,568,84,9,645,58,)
+print(tuple)
+tuple2=("rygua",1,1.0,True)
+print(tuple2)
+tuple3=tuple+(9,)
+print(tuple3)
+print(len(tuple))
+s=tuple[::3]
+print(s)
+
+def palindrome(r):
+    e=len(r)-1
+    s=0
+    while s<e:
+        if (r[s]!=r[e]):
+            return False
+        s=s+1
+        e=e-1
+    return True
+r=(3,4,3)
+if palindrome(r):
+    print("yes it is a palindrome")
+else:
+    print("it is not a palindrome")
+
+weather=(1,0,1,0,1,0,1,1,1)
+sunny=0
+rainy=0
+for i in range(9):
+    if (weather[i]==0):
+        rainy+=1
+    else:
+        sunny+=1
+if sunny>rainy:
+    print("good weather")
+else:
+    print("bad weather")
