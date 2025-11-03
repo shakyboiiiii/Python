@@ -1,0 +1,34 @@
+num=[1,2,5,6]
+num1=[5,8,3,7]
+result=map(lambda x,y:x+y, num,num1)
+print(list(result))
+
+print("printing squares for the list")
+num2=[2,3,4,5]
+def sq(n):
+    return n*n
+square=list(map(sq,num2))
+print(square)
+
+
+s=[1,6,5]
+s2=['a','b','c']
+s1=list(zip(s,s2))
+print(s1)
+
+list=[534,35,21,254]
+list1=[354,635,5,984]
+for x,y in zip(list,list1[::-1]):
+    print(x,y)
+
+stocks=['grrdsr','hgdr','fhe']
+price=[3548,5486,5284]
+new_distic={stocks: price for stocks,price in zip(stocks,price)}
+print('\n{}'.format(new_distic))
+
+
+for i in range(10):
+    if i==5:
+        print(exit)
+        exit()
+    print(i)
