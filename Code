@@ -1,0 +1,19 @@
+import random
+import string
+
+def generate_random_password(length=12):
+    characters = string.ascii_letters + string.digits
+    password_list = []
+    password_list.append(random.choice(string.ascii_lowercase))
+    password_list.append(random.choice(string.ascii_uppercase))
+    password_list.append(random.choice(string.digits))
+    for _ in range(length - 3):
+        password_list.append(random.choice(characters))
+    random.shuffle(password_list)
+    password = "".join(password_list)
+    return password
+password_length = 10
+new_password = generate_random_password(password_length)
+print(f"Generated password (Length: {password_length}): {new_password}")
+another_password = generate_random_password()
+print(f"Generated password (Length: 12): {another_password}")
