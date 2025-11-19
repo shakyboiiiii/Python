@@ -1,0 +1,37 @@
+class Myclass:
+    def __init__(self,val):
+        self.__privatvar=val
+    def __privatemethod(self):
+        print("private method called")
+    def holl(self):
+        print(self.__privatvar)
+obj=Myclass(42)
+obj.holl()
+obj._Myclass__privatemethod()
+
+
+class computer:
+    def __init__(self):
+        self.__max_price=50000
+    def sell(self):
+        print("Selling prrice:",self.__max_price)
+    def setmaxprice(self,price):
+        self.__max_price=price
+c=computer()
+c.sell()
+
+c.__max_price=30000
+c.sell()
+
+c.setmaxprice(30000)
+c.sell()
+
+
+class point():
+    def __init__(self,x,y):
+        self.x=x
+        self.y=y
+    def show_point(self):
+        return "point:",self.x,self.y
+p=point(10,20)
+print(p.show_point())
